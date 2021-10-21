@@ -4,7 +4,7 @@ import json
 token  = 'OGZlODIwMWYtZjc0ZC00NzQxLWIxNzMtMWNjNGRlZmU0MmZmYWY2ZTUzMGItNWVk_PF84_consumer'
 roomid = 'Y2lzY29zcGFyazovL3VzL1JPT00vOGVhZTVlYjAtMmY2NC0xMWVjLThkMWQtNzliZDE4YzM5OGY1'
 
-def get_message(request, msgid):
+def get_message(request, msgid=None):
 
     if request != None:
         webhook_notify = json.loads(request.data.decode('utf-8'))

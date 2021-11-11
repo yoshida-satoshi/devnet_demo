@@ -1,12 +1,14 @@
 
-#
-# 自己発行証明書の警告を抑制する
-#
+# おまじない処理
+# IOS XEがHTTPSのために作成した自己発行証明書に対する警告を抑制することで、スクリプト実行時の見栄えをキレイにする
+# 
 import urllib3
 from urllib3.exceptions import InsecureRequestWarning
 urllib3.disable_warnings(InsecureRequestWarning)
 
 
+# スクリプト実行時の見栄えを整えるための表示
+print('----- Start change QoS ------')
 
 
 # Router1 QoS RESTRICTED
@@ -23,7 +25,8 @@ headers = {
 
 response = requests.request("PATCH", url, headers=headers, data=payload, verify=False)
 
-print(response.text)
+# レスポンスの表示は不要であるため、見栄えを整えるためにprint文をコメントアウトする
+# print(response.text)
 
 
 
@@ -41,4 +44,11 @@ headers = {
 
 response = requests.request("PATCH", url, headers=headers, data=payload, verify=False)
 
-print(response.text)
+# レスポンスの表示は不要であるため、見栄えを整えるためにprint文をコメントアウトする
+# print(response.text)
+
+
+# スクリプト実行時の見栄えを整えるための表示
+print('----- Complete change QoS ------')
+
+

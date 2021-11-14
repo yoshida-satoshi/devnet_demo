@@ -1,7 +1,7 @@
-# Webex Teamsにshow run送信
+# Webex Teams show run
 import requests
 import cli
-showrun = cli.execute("shwo run int gi1")
+showrun = cli.execute("show run int gi1")
 
 payload="{\r\n  \"roomId\": \"Y2lzY29zcGFyazovL3VybjpURUFNOnVzLXdlc3QtMl9yL1JPT00vNzBlNWYwZTAtNDQ5Yi0xMWVjLTkxMzEtMWRlMmQ0OThhM2Ey\",\r\n  \"text\": \"{}\"\r\n}".format(showrun)
 headers = {

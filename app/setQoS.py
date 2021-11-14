@@ -52,3 +52,25 @@ response = requests.request("PATCH", url, headers=headers, data=payload, verify=
 print('----- Complete change QoS ------')
 
 
+
+
+
+
+
+# Webex Teamsにチャット送信
+import requests
+
+url = "https://webexapis.com/v1/messages"
+
+payload="{\r\n  \"roomId\": \"Y2lzY29zcGFyazovL3VybjpURUFNOnVzLXdlc3QtMl9yL1JPT00vNzBlNWYwZTAtNDQ5Yi0xMWVjLTkxMzEtMWRlMmQ0OThhM2Ey\",\r\n  \"text\": \"Script Complete! QoS OK! \"\r\n}"
+headers = {
+  'Content-Type': 'application/json',
+  'Authorization': 'Bearer MTE0Njc4OTktYThlMi00MTEwLWIxNmMtZGUzNWEzNGM1MjM1YzhmMWJlMTMtMDYw_P0A1_c98415b4-c72b-47aa-82ca-ffe96054cf5a'
+}
+
+response = requests.request("POST", url, headers=headers, data=payload)
+
+print(response.text)
+
+
+

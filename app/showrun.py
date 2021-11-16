@@ -8,7 +8,7 @@ import json
 
 url = "https://webexapis.com/v1/messages"
 
-payload={"roomId":"Y2lzY29zcGFyazovL3VybjpURUFNOnVzLXdlc3QtMl9yL1JPT00vZjFlMjVkYzAtNDY4ZC0xMWVjLTg1YTAtMmI1Y2QxMzA4YTY5","text":"{}".format(show_run)}
+payload={"roomId":"Y2lzY29zcGFyazovL3VybjpURUFNOnVzLXdlc3QtMl9yL1JPT00vZjFlMjVkYzAtNDY4ZC0xMWVjLTg1YTAtMmI1Y2QxMzA4YTY5","text":show_run}
 
 headers = {
   'Content-Type': 'application/json',

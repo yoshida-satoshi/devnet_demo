@@ -48,6 +48,19 @@ print(response.text)
 
 
 
+import requests
+
+url = "https://webexapis.com/v1/messages"
+
+payload="{\r\n  \"roomId\": \"Y2lzY29zcGFyazovL3VybjpURUFNOnVzLXdlc3QtMl9yL1JPT00vN2VlNmVhNDAtNTc1Mi0xMWVjLWI0N2UtNDMxOGIyNGU0ODE1\",\r\n  \"text\": \"QoS change\"\r\n}"
+headers = {
+  'Content-Type': 'application/json',
+  'Authorization': 'Bearer MGM4YjA4MmYtMzI3YS00Y2QyLWE1ODUtYmM4NWY1NDM1ZDUyZmJmNTNmOWUtNzk0_P0A1_c98415b4-c72b-47aa-82ca-ffe96054cf5a'
+}
+
+response = requests.request("POST", url, headers=headers, data=payload)
+
+print(response.text)
 
 
 
